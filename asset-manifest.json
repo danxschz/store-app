@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/store-app/static/css/main.c8ad487c.css",
+    "main.js": "/store-app/static/js/main.cf265166.js",
+    "static/media/sel-01.png": "/store-app/static/media/sel-01.ed9e4c9c9f6945db5150.png",
+    "static/media/opi-01.png": "/store-app/static/media/opi-01.1a9bd2211970840e3e83.png",
+    "static/media/jba-02.png": "/store-app/static/media/jba-02.6be79eb309dc1e82a912.png",
+    "static/media/dsl-01.png": "/store-app/static/media/dsl-01.fb66feb7999e03222d55.png",
+    "static/media/sgh.jpg": "/store-app/static/media/sgh.f150c3f81045c8834807.jpg",
+    "static/media/aot-01.png": "/store-app/static/media/aot-01.ec83c05f0f535709b381.png",
+    "static/media/sxf-01.png": "/store-app/static/media/sxf-01.5684433023d0a475caee.png",
+    "static/media/jba-01.png": "/store-app/static/media/jba-01.92eb9687baa0f5556d19.png",
+    "static/media/jjk-02.png": "/store-app/static/media/jjk-02.b62a2b84ffc954807453.png",
+    "static/media/dsl-03.png": "/store-app/static/media/dsl-03.6ccc2f2de3735504da28.png",
+    "static/media/aot-02.png": "/store-app/static/media/aot-02.ca5137c66468a655b7a0.png",
+    "static/media/sel-03.png": "/store-app/static/media/sel-03.c0caec9c74b91bcae66b.png",
+    "static/media/banner.webp": "/store-app/static/media/banner.a08ac41a694b720d79d0.webp",
+    "static/media/opi.webp": "/store-app/static/media/opi.f7379858e8ae474c790b.webp",
+    "static/media/dsl-02.png": "/store-app/static/media/dsl-02.131f38891a00f29eecfe.png",
+    "static/media/nar-02.png": "/store-app/static/media/nar-02.eda023a4541a650317ff.png",
+    "static/media/sel-02.png": "/store-app/static/media/sel-02.0cbfbc69376ca9b3e357.png",
+    "static/media/sgh-01.png": "/store-app/static/media/sgh-01.8d34f43a29f9f29ac288.png",
+    "static/media/jjk-01.png": "/store-app/static/media/jjk-01.b5a31070c8bdf46c21de.png",
+    "static/media/nar-01.png": "/store-app/static/media/nar-01.5eaf026707e0d9669ab5.png",
+    "static/media/dsl.jpg": "/store-app/static/media/dsl.a5d2a0025f2ccdc75d3f.jpg",
+    "static/media/nar-03.png": "/store-app/static/media/nar-03.75527b70ca9655021584.png",
+    "static/media/nar.jpeg": "/store-app/static/media/nar.ddbbdc87f90be418e17f.jpeg",
+    "static/media/jba.jpeg": "/store-app/static/media/jba.019e616aba8f3ff739d3.jpeg",
+    "static/media/logo.png": "/store-app/static/media/logo.65e3a9d398986dd1e8d6.png",
+    "static/media/sgh-02.png": "/store-app/static/media/sgh-02.7dc84d1aa25010f527b6.png",
+    "static/media/sxf.webp": "/store-app/static/media/sxf.fff0810207da3c62bf13.webp",
+    "static/media/jjk.webp": "/store-app/static/media/jjk.d2c82551a6d985ddba75.webp",
+    "static/media/aot.webp": "/store-app/static/media/aot.e52382cd106d3f464fa0.webp",
+    "static/media/sel.jpg": "/store-app/static/media/sel.1662e5c166e89677229b.jpg",
+    "index.html": "/store-app/index.html",
+    "main.c8ad487c.css.map": "/store-app/static/css/main.c8ad487c.css.map",
+    "main.cf265166.js.map": "/store-app/static/js/main.cf265166.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c8ad487c.css",
+    "static/js/main.cf265166.js"
+  ]
+}
