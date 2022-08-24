@@ -19,3 +19,17 @@
     text-transform: uppercase;
   }
 }
+
+@media (max-width: 600px) {
+  .info-bar {
+    justify-content: center;
+  }
+  
+  .socials {
+    display: none;
+  }
+
+  .info {
+    gap: 8px;
+  }
+}

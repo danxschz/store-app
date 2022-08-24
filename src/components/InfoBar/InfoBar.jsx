@@ -5,16 +5,16 @@ const InfoBar = () => {
   return (
     <div className={styles['info-bar']}>
       <div className={styles.socials}>
-        <IconLink href="https://instagram.com" blank scheme="scheme-primary" icon="fa-brands fa-instagram" hover="grow"/>
-        <IconLink href="https://facebook.com" blank scheme="scheme-primary" icon="fa-brands fa-facebook" hover="grow"/>
-        <IconLink href="https://tiktok.com" blank scheme="scheme-primary" icon="fa-brands fa-tiktok" hover="grow"/>
+        <IconLink href="https://instagram.com" blank label="Instagram" scheme="scheme-primary" icon="fa-brands fa-instagram" hover="grow"/>
+        <IconLink href="https://facebook.com" blank label="Facebook" scheme="scheme-primary" icon="fa-brands fa-facebook" hover="grow"/>
+        <IconLink href="https://tiktok.com" blank label="TikTok" scheme="scheme-primary" icon="fa-brands fa-tiktok" hover="grow"/>
       </div>
       <div className={styles.info}>
         <strong>Free Shipping!</strong>
         <span>VE Orders <strong>$50+</strong></span>
         <span>Outside VE <strong>$100+</strong></span>
       </div>
-      <div className={`${styles.socials} hidden`}>
+      <div className={`${styles.socials} hidden`} aria-hidden="true">
         <IconLink icon="fa-brands fa-instagram" />
         <IconLink icon="fa-brands fa-facebook" />
         <IconLink icon="fa-brands fa-tiktok" />
