@@ -3,6 +3,7 @@ import { useState } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import InfoBar from './components/InfoBar/InfoBar';
 import Header from './components/Header/Header';
+import MobileNav from './components/MobileNav/MobileNav';
 import Home from './pages/Home/Home';
 import Cases from './pages/Cases/Cases';
 import ItemDetail from './pages/ItemDetail/ItemDetail';
@@ -22,6 +23,7 @@ function App() {
       <div className="App">
         <InfoBar />
         <Header />
+        <MobileNav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop/cases" element={<Cases />} />

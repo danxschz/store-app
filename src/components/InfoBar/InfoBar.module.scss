@@ -1,18 +1,23 @@
 @import '../../assets/shared';
 
 .info-bar {
-  @include flex-row(null, center, space-between);
-  padding: 12px 3vw;
   background: $clr-primary;
+}
+
+.container {
+  @include flex-row(null, center, space-between);
+  padding-block: 12px;
   color: $clr-neutral-light;
+  width: min(94%, 1500px);
+  margin-inline: auto;
 }
 
 .socials {
-  @include flex-row(16px);
+  @include flex-row(1rem);
 }
 
 .info {
-  @include flex-row(24px);
+  @include flex-row(1.5rem);
   font-size: 0.8rem;
 
   > strong {
@@ -21,7 +26,7 @@
 }
 
 @media (max-width: 600px) {
-  .info-bar {
+  .container {
     justify-content: center;
   }
   
@@ -30,6 +35,6 @@
   }
 
   .info {
-    gap: 8px;
+    gap: 0.5rem;
   }
 }

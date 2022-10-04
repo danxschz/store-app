@@ -1,6 +1,6 @@
 import styles from './Cart.module.scss';
 import { closeCart } from './openCart';
-import Overlay from './Overlay/Overlay';
+import Overlay from '../../components/Overlay/Overlay';
 import IconButton from '../../components/IconButton/IconButton';
 import CartContent from './CartContent/CartContent';
 import EmptyCart from './EmptyCart/EmptyCart';
@@ -29,7 +29,7 @@ const Cart = (props) => {
 
   return (
     <div>
-      <Overlay onClick={closeCart}/>
+      <Overlay id="overlay-cart" onClick={closeCart}/>
       <div id="cart" className={styles.cart}>
         <div className={styles.header}>
           <IconButton scheme="scheme-primary_inv" icon="fa-solid fa-angle-right" hover="rotate-45" onClick={closeCart} />

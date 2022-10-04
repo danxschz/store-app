@@ -1,8 +1,8 @@
 @import '../../assets/shared';
 
 .cart {
-  height: 100%;
   width: 0;
+  height: 100%;
   background: $clr-neutral-light;
   position: fixed;
   top: 0;
@@ -10,14 +10,19 @@
   overflow-x: hidden;
   overflow-y: scroll;
   transition: width 0.5s;
+  z-index: 1;
 
   > div {
-    width: 463px;
+    min-width: 450px;
   }
 
   label {
     display: none;
   }
+}
+
+.cart_open {
+  width: 480px;
 }
 
 .header {
@@ -28,5 +33,17 @@
 
   button:nth-child(3) {
     visibility: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .cart {  
+    > div {
+      min-width: 200px;
+    }
+  }
+
+  .cart_open {
+    width: 75%;
   }
 }

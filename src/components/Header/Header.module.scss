@@ -1,13 +1,23 @@
 @import '../../assets/shared';
 
 .header {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.content {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   justify-content: space-between;
   align-items: center;
-  padding: 6px 3vw;
+  width: min(94%, 1500px);
+  margin-inline: auto;
+  padding-block: 6px;
 
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  > button:first-child {
+    font-size: 1.2rem;
+    justify-self: start;
+    display: none;
+  }
 
   a {
     text-decoration: none;
@@ -43,32 +53,14 @@
   @include flex-row(null, center, flex-end);
 
   form {
-    @include flex-row(null, center, flex-end);
     width: clamp(100px, 40%, 500px);
-    padding: 4px;
-    border: 1px solid $clr-input;
-    border-radius: 4px;
-    margin-right: 10px;
-  
-    label {
-      display: none;
-    }
-  
-    button {
-      background: $clr-neutral-light;
-      border: none;
-      padding: 1px 6px;
-    }  
+    margin-right: 10px; 
   }
 
   i {
     color: $clr-primary;
     font-size: 1.2rem;
   }
-}
-
-.focus {
-  outline: 2px solid $clr-primary;
 }
 
 input[type="search"] {
@@ -110,5 +102,31 @@ input[type="search"]::-webkit-search-cancel-button {
   &:hover::before, &:focus::before, &:active::before {
     left: 0;
     right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    > button:first-child {
+      display: block;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+
+  .logo {
+    img {
+      width: 45px;
+    }
+
+    a:last-child {
+      display: none;
+    }
+  }
+
+  .user form {
+    display: none;
   }
 }

@@ -1,0 +1,69 @@
+@import '../../assets/shared';
+
+.container {
+  display: none;
+  position: fixed;
+}
+
+.nav {
+  width: 0;
+  height: 100%;
+  background: $clr-neutral-light;
+  padding-block: 0.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: width 0.5s;
+  z-index: 1;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.logo {
+  @include flex-row(12px, center, center);
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+
+  img {
+    width: 45px;
+    padding-top: 6px;
+  }
+
+  a {
+    color: $clr-primary;
+    white-space: nowrap;
+  }
+}
+
+.nav {
+  ul {
+    @include flex-col(24px);
+    padding-inline: 1.5rem;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  
+    a {
+      color: $clr-neutral-dark;
+      white-space: nowrap;
+    }
+  }
+}
+
+.nav {
+  form {
+    margin-inline: 1.5rem;
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    display: block;
+  }
+}
+

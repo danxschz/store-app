@@ -1,0 +1,22 @@
+@import '../../assets/shared';
+
+.form {
+  @include flex-row(null, center, flex-end);
+  padding: 4px;
+  border: 1px solid $clr-input;
+  border-radius: 4px;
+
+  label {
+    display: none;
+  }
+
+  button {
+    background: $clr-neutral-light;
+    border: none;
+    padding: 1px 6px;
+  }  
+}
+
+.focus {
+  outline: 2px solid $clr-primary;
+}
