@@ -16,9 +16,9 @@ const InfoBar = () => {
           <span>Outside VE <strong>$100+</strong></span>
         </div>
         <div className={`${styles.socials} hidden`} aria-hidden="true">
-          <IconLink icon="fa-brands fa-instagram" />
-          <IconLink icon="fa-brands fa-facebook" />
-          <IconLink icon="fa-brands fa-tiktok" />
+          <i className="fa-brands fa-instagram"></i>
+          <i className="fa-brands fa-facebook"></i>
+          <i className="fa-brands fa-tiktok"></i>
         </div>
       </div>
     </div>

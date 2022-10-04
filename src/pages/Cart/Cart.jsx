@@ -32,9 +32,9 @@ const Cart = (props) => {
       <Overlay id="overlay-cart" onClick={closeCart}/>
       <div id="cart" className={styles.cart}>
         <div className={styles.header}>
-          <IconButton scheme="scheme-primary_inv" icon="fa-solid fa-angle-right" hover="rotate-45" onClick={closeCart} />
+          <IconButton scheme="scheme-primary_inv" label="Close cart" icon="fa-solid fa-angle-right" hover="rotate-45" onClick={closeCart} />
           <h2>My Cart</h2>
-          <IconButton scheme="scheme-light" icon="fa-solid fa-angle-right" />
+          <div aria-hidden="true"><IconButton scheme="scheme-light" icon="fa-solid fa-angle-right" /></div>
         </div>
         {(cart.length > 0) 
           ? <CartContent cart={cart} summary={summary} removeItem={removeItem} changeQuantity={changeQuantity} /> 

@@ -21,7 +21,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className={styles.user}>
-          <SearchBar />
+          <SearchBar id="search"/>
           <IconButton scheme="scheme-primary_inv" icon="fa-solid fa-user" label="User" hover="glow" />
           <IconButton scheme="scheme-primary_inv" icon="fa-solid fa-cart-shopping" label="Shopping Cart" hover="glow" onClick={openCart} />
         </div>
