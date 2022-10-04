@@ -4,7 +4,7 @@ import IconLink from '../IconLink/IconLink';
 const InfoBar = () => {
   return (
     <div className={styles['info-bar']}>
-      <div className={styles.container}>
+      <div className={styles.content}>
         <div className={styles.socials}>
           <IconLink href="https://instagram.com" blank label="Instagram" scheme="scheme-primary" icon="fa-brands fa-instagram" hover="grow"/>
           <IconLink href="https://facebook.com" blank label="Facebook" scheme="scheme-primary" icon="fa-brands fa-facebook" hover="grow"/>

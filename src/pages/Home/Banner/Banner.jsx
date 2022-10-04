@@ -10,8 +10,10 @@ const Banner = (props) => {
 
   return(
     <div className={styles.banner} style={style}>
-      <h1>{text}</h1>
-      <ButtonLink text={btnText} scheme={scheme} hover={hover} href={href} />
+      <div className={styles.content}>
+        <h1>{text}</h1>
+        <ButtonLink text={btnText} scheme={scheme} hover={hover} href={href} />
+      </div>
     </div>
   )
 }

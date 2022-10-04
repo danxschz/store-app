@@ -1,6 +1,6 @@
 @import '../../assets/shared';
 
-.container {
+.content {
   display: none;
   position: fixed;
 }
@@ -62,7 +62,7 @@
 }
 
 @media (max-width: 600px) {
-  .container {
+  .content {
     display: block;
   }
 }

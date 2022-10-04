@@ -1,16 +1,30 @@
 @import '../../../assets/shared';
 
 .banner {
-  @include flex-col(24px, flex-start, center);
   height: 80vh;
   width: 100%;
-  padding: 0 8vw;
   background-position: center;
   background-size: cover;
+}
+
+.content {
+  @include flex-col(1.5rem, flex-start, center);
+  width: min(94%, 1500px);
+  height: 100%;
+  padding-inline: 4.5vw;
+  margin-inline: auto;
 
   h1 {
     font-size: 3rem;
     text-shadow: 2px 2px 8px rgb(0, 0, 0);
     color: $clr-neutral-light;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    align-items: center;
+    text-align: center;
+    padding-inline: 3vw;
   }
 }

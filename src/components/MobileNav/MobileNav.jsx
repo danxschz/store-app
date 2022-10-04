@@ -7,7 +7,7 @@ import SearchBar from '../SearchBar/SearchBar';
 
 const MobileNav = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.content}>
       <Overlay id="overlay-nav" onClick={closeNav}/>
       <nav id="nav" className={styles.nav}>
         <div className={styles.logo}><Link to="/" aria-label="Home"><img src={logo} alt="logo" /></Link><Link to="/">The Rage Lab</Link></div>

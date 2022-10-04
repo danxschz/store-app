@@ -4,7 +4,7 @@
   background: $clr-primary;
 }
 
-.container {
+.content {
   @include flex-row(null, center, space-between);
   padding-block: 12px;
   color: $clr-neutral-light;
@@ -26,7 +26,7 @@
 }
 
 @media (max-width: 600px) {
-  .container {
+  .content {
     justify-content: center;
   }
   
