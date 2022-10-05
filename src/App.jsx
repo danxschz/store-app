@@ -23,7 +23,6 @@ function App() {
       <div className="App">
         <InfoBar />
         <Header />
-        <MobileNav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop/cases" element={<Cases />} />
@@ -34,6 +33,7 @@ function App() {
           <Route path="/shop/accesories" element={<ThankYou />} />
           <Route path="/checkout" element={<ThankYou />} />
         </Routes>
+        <MobileNav />
         <Cart cart={cart} setCart={setCart} />
         <Footer />
       </div>

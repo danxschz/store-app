@@ -16,14 +16,16 @@ const Collection = () => {
   useDocTitle(`${collection.name} Cases`);
 
   return (
-    <main className={styles.container}>
-      <div className={styles.header}>
-        <SectionHeader text={`${collection.name} Cases`} />
-      </div>
-      <div className={styles.cases}>
-        {collectionItems.map((key) => {
-          return <Item case={cases[key]} id={key} key={key} />
-        })}
+    <main>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <SectionHeader text={`${collection.name} Cases`} />
+        </div>
+        <div className={styles.cases}>
+          {collectionItems.map((key) => {
+            return <Item case={cases[key]} id={key} key={key} />
+          })}
+        </div>
       </div>
     </main>
   );

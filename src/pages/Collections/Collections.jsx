@@ -8,12 +8,14 @@ const Collections = () => {
   useDocTitle('Collections');
   
   return (
-    <main className={styles.container}>
-      <div className={styles.header}><SectionHeader text="Collections" /></div>
-      <div className={styles.collections}>
-        {Object.entries(collections).map(([key, value]) => {
-          return <CollectionCard collection={value} id={key} key={key} />
-        })}
+    <main>
+      <div className={styles.content}>
+        <div className={styles.header}><SectionHeader text="Collections" /></div>
+        <div className={styles.collections}>
+          {Object.entries(collections).map(([key, value]) => {
+            return <CollectionCard collection={value} id={key} key={key} />
+          })}
+        </div>
       </div>
     </main>
   )

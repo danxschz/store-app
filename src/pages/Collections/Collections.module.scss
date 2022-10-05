@@ -1,18 +1,21 @@
 @import '../../assets/shared';
 
+.content {
+  width: min(94%, 1500px);
+  margin-inline: auto;
+}
+
 .header {
-  margin-top: 52px;
-  padding: 0 3vw;
+  margin-top: 3rem;
 }
 
 .collections {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 1fr;
-  gap: 16px;
+  gap: 1rem;
   width: 100%;
-  padding: 0 3vw;
-  margin-bottom: 52px;
+  margin-bottom: 3rem;
 
   // Make grid track height same as width
   &::before {
@@ -26,5 +29,16 @@
   > *:first-child{
     grid-row: 1 / 1;
     grid-column: 1 / 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-top: 2.5rem;
+  }
+
+  .collections {
+    grid-template-columns: 1fr;
+    margin-bottom: 2.5rem;
   }
 }

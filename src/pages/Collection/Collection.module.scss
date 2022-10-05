@@ -1,14 +1,28 @@
 @import '../../assets/shared';
 
+.content {
+  width: min(94%, 1500px);
+  margin-inline: auto;
+}
+
 .header {
-  margin-top: 52px;
-  padding: 0 3vw;
+  margin-top: 3rem;
 }
 
 .cases {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 0 3vw;
-  row-gap: 42px;
-  margin-bottom: 52px;
+  row-gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+  .header {
+    margin-top: 2.5rem;
+  }
+
+  .cases {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2.5rem;
+  }
 }
