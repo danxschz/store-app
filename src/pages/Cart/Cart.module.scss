@@ -27,7 +27,7 @@
 
 .header {
   @include flex-row(null, center, space-between);
-  padding: 20px 2vw;
+  padding: 1.2rem 1.5rem;
   position: relative;
   box-shadow: 0 0 1px rgba(221, 95, 95, 0.3);
 
@@ -39,11 +39,15 @@
 @media (max-width: 600px) {
   .cart {  
     > div {
-      min-width: 200px;
+      min-width: 250px;
     }
   }
 
   .cart_open {
-    width: 75%;
+    width: 80%;
+  }
+
+  .header {
+    padding: 1.2rem 1.2rem;
   }
 }

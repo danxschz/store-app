@@ -50,6 +50,11 @@
     a {
       color: $clr-neutral-dark;
       white-space: nowrap;
+      transition: color 0.3s;
+
+      &:hover, &:focus, &:active {
+        color: $clr-primary
+      }
     }
   }
 }
@@ -66,4 +71,3 @@
     display: block;
   }
 }
-

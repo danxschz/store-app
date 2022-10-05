@@ -1,14 +1,16 @@
 @import '../../assets/shared';
 
-.header {
-  margin-top: 52px;
-  padding: 0 3vw;
+.main {
+  @include flex-col(null, null, center);
 }
 
 .content {
-  @include flex-col(32px);
-  padding: 0 3vw;
-  margin-bottom: 52px;
+  width: min(94%, 1500px);
+  margin-inline: auto;
+}
+
+.info {
+  @include flex-col(2rem);
   font-size: 1.1rem;
   text-align: center;
 

@@ -1,13 +1,13 @@
 @import '../../../assets/shared';
 
 .items {
-  @include flex-col(32px);
-  padding: 20px 2vw;
+  @include flex-col(2rem);
+  padding: 1.2rem 1.5rem;
 }
 
 .summary {
-  @include flex-col(16px);
-  padding: 20px 2vw;
+  @include flex-col(1rem);
+  padding: 1.2rem 1.5rem;
 
   div {
     @include flex-row(null, center, space-between);
@@ -16,5 +16,11 @@
 }
 
 .btn {
-  padding: 20px 2vw;
+  padding: 1.2rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .items, .summary, .btn {
+    padding: 1.2rem 1.2rem;
+  }
 }

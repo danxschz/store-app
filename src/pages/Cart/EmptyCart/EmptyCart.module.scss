@@ -5,12 +5,18 @@
 }
 
 .message {
-  padding: 20px 2vw;
+  padding: 1.2rem 1.5rem;
   font-weight: 600;
   font-size: 1.05rem;
   text-align: center;
 }
 
 .btn {
-  padding: 20px 2vw;
+  padding: 1.2rem 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .message, .btn {
+    padding: 1.2rem 1.2rem;
+  }
 }

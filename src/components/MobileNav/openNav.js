@@ -2,7 +2,7 @@ const openNav = () => {
   const nav = document.querySelector('#nav');
   const overlay = document.querySelector('#overlay-nav');
 
-  nav.style.width = '75%';
+  nav.style.width = '80%';
   overlay.style.height = 'auto';
   overlay.style.opacity = 0.8;
 }
