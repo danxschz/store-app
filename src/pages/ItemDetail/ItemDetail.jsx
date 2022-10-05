@@ -19,15 +19,17 @@ const ItemDetail = (props) => {
   useDocTitle(`${name} Case`);
 
   return (
-    <main className={styles.item}>
-      <div className={styles.img}><img src={img} alt={`${name} case`} /></div>
-      <div className={styles.info}>
-        <div>
-          <div className={styles.collection}>{collection}</div>
-          <h1 className={styles.name}>{name}</h1>
-          <div className={styles.price}>{`$${price} USD`}</div>
+    <main className={styles.main}>
+      <div className={styles.content}>
+        <div className={styles.img}><img src={img} alt={`${name} case`} /></div>
+        <div className={styles.info}>
+          <div>
+            <div className={styles.collection}>{collection}</div>
+            <h1 className={styles.name}>{name}</h1>
+            <div className={styles.price}>{`$${price} USD`}</div>
+          </div>
+          <Form item={item} id={id} addItem={addItem} />
         </div>
-        <Form item={item} id={id} addItem={addItem} />
       </div>
     </main>
   )

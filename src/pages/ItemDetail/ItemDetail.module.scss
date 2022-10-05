@@ -1,11 +1,16 @@
 @import '../../assets/shared';
 
-.item {
+.main {
+  @include flex-col(null, null, center)
+}
+
+.content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 0 6vw;
-  margin: 30px 0;
+  width: min(94%, 1500px);
+  margin-inline: auto;
+  margin-block: 1.6rem;
 }
 
 .img {
@@ -17,12 +22,12 @@
 }
 
 .info {
-  @include flex-col(32px, null, space-between);
+  @include flex-col(2rem, null, space-between);
   height: 100%;
-  padding: 22px;
+  padding: 1.4rem;
 
   > div {
-    @include flex-col(16px);
+    @include flex-col(1rem);
   }
 }
 
@@ -39,4 +44,16 @@
 .price {
   font-size: 1.15rem;
   font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    > div {
+      text-align: center;
+    }
+  }
 }
