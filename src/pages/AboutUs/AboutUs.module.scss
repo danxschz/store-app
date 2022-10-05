@@ -5,10 +5,11 @@
 }
 
 .banner {
-  @include flex-col(52px, center, center);
-  height: 75vh;
+  @include flex-col(3rem, center, center);
+  min-height: 75vh;
   width: 100%;
-  padding: 52px 3vw;
+  padding-block: 3rem;
+  padding-inline: 3%;
   background: linear-gradient(to bottom, lighten($clr-primary, 8%) 0%, $clr-primary 100%);
   color: $clr-neutral-light;
   text-align: center;
@@ -21,7 +22,7 @@
   }
 
   div {
-    @include flex-col(16px);
+    @include flex-col(1rem);
   }
 
   strong {
@@ -36,8 +37,9 @@
 }
 
 .info {
-  @include flex-col(42px, center);
-  padding: 52px 3vw;
+  @include flex-col(2.5rem, center);
+  padding-block: 3rem;
+  text-align: center;
 
   h2 {
     font-size: 2rem;
@@ -53,8 +55,9 @@
 .imgs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  padding: 0 3vw;
+  width: min(94%, 1500px);
+  margin-inline: auto;
+  gap: 1rem;
 
   img {
     width: 100%;
@@ -67,11 +70,12 @@
 }
 
 .description {
-  @include flex-col(32px, center);
-  max-width: 65%;
-  margin: 52px 0;
+  @include flex-col(2rem, center);
+  margin-block: 3rem;
   text-align: center;
   font-size: 1.1rem;
+  width: min(65%, 975px);
+  margin-inline: auto;
 
   strong {
     color: $clr-primary;
@@ -79,10 +83,43 @@
 }
 
 .shop {
-  @include flex-col(52px, center);
-  margin-bottom: 52px;
+  @include flex-col(3rem, center);
+  margin-bottom: 3rem;
 
   img {
     width: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    padding-block: 2.5rem;
+    gap: 2.5rem;
+  }
+
+  .info {
+    width: 94%;
+    margin-inline: auto;
+    padding-block: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .description {
+    width: 94%;
+    margin-block: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .shop {
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .imgs {
+    grid-template-columns: 1fr 1fr;
+
+    img:nth-child(2) {
+      display: none;
+    }
   }
 }
