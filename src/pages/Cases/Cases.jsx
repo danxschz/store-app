@@ -8,14 +8,16 @@ const Cases = () => {
   useDocTitle('Cases');
 
   return (
-    <main className={styles.container}>
-      <div className={styles.header}>
-        <SectionHeader text="All Cases" />
-      </div>
-      <div className={styles.cases}>
-        {Object.entries(cases).map(([key, value]) => {
-          return <Item case={value} id={key} key={key} />
-        })}
+    <main>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <SectionHeader text="All Cases" />
+        </div>
+        <div className={styles.cases}>
+          {Object.entries(cases).map(([key, value]) => {
+            return <Item case={value} id={key} key={key} />
+          })}
+        </div>
       </div>
     </main>
   );

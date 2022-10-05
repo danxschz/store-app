@@ -13,7 +13,7 @@ const Home = () => {
   useDocTitle();
 
   return (
-    <main className={styles.home}>
+    <main className={styles.main}>
       <Banner text="Phone cases built for the bold" btnText="Shop Now" scheme="scheme-light" hover="outline-light" href="/shop/cases" banner={assets.banner} />
       <div className={styles.collections}>
         <SectionHeader text="Popular Collections" href="/shop/collections" />
