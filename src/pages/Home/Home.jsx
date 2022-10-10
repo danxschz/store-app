@@ -1,7 +1,5 @@
 import styles from './Home.module.scss';
 import assets from './assets';
-import cases from '../../data/cases';
-import collections from '../../data/collections';
 import useDocTitle from '../../hooks/useDocTitle';
 import Banner from './Banner/Banner';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
@@ -9,7 +7,8 @@ import CollectionCard from '../../components/CollectionCard/CollectionCard';
 import ButtonLink from '../../components/ButtonLink/ButtonLink';
 import Item from '../../components/Item/Item';
 
-const Home = () => {
+const Home = (props) => {
+  const{ collections, cases } = props;
   useDocTitle();
 
   return (
@@ -18,9 +17,9 @@ const Home = () => {
       <div className={styles.collections}>
         <SectionHeader text="Popular Collections" href="/shop/collections" />
         <div className={styles.cards}>
-          <CollectionCard collection={collections.nar} id="nar" />
-          <CollectionCard collection={collections.dsl} id="dsl" />
-          <CollectionCard collection={collections.aot} id="aot" />
+          <CollectionCard collection={collections.find(i => i.id === 'nar')} />
+          <CollectionCard collection={collections.find(i => i.id === 'dsl')} />
+          <CollectionCard collection={collections.find(i => i.id === 'aot')} />
         </div>
       </div>
       <div className={styles.about}>
@@ -34,10 +33,10 @@ const Home = () => {
       <div className={styles.trending}>
         <SectionHeader text="Trending Now" />
         <div className={styles.cases}>
-          <Item case={cases['aot-02']} id="aot-02" />
-          <Item case={cases['sxf-01']} id="sxf-01" />
-          <Item case={cases['sgh-01']} id="sgh-01" />
-          <Item case={cases['jjk-02']} id="jjk-02" />
+          <Item item={cases.find(i => i.id === 'aot-02')} />
+          <Item item={cases.find(i => i.id === 'sxf-01')} />
+          <Item item={cases.find(i => i.id === 'sgh-01')} />
+          <Item item={cases.find(i => i.id === 'jjk-02')} />
         </div>
       </div>
     </main>

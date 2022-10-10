@@ -1,10 +1,10 @@
 import styles from './Collections.module.scss';
-import collections from '../../data/collections';
 import useDocTitle from '../../hooks/useDocTitle';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import CollectionCard from '../../components/CollectionCard/CollectionCard';
 
-const Collections = () => {
+const Collections = (props) => {
+  const { collections } = props;
   useDocTitle('Collections');
   
   return (
@@ -12,8 +12,8 @@ const Collections = () => {
       <div className={styles.content}>
         <div className={styles.header}><SectionHeader text="Collections" /></div>
         <div className={styles.collections}>
-          {Object.entries(collections).map(([key, value]) => {
-            return <CollectionCard collection={value} id={key} key={key} />
+          {collections.map((collection) => {
+            return <CollectionCard collection={collection} key={collection.id} />
           })}
         </div>
       </div>

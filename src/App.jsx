@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import InfoBar from './components/InfoBar/InfoBar';
 import Header from './components/Header/Header';
@@ -16,6 +16,25 @@ import Footer from './components/Footer/Footer';
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [collections, setCollections] = useState([]);
+  const [cases, setCases] = useState([]);
+
+  useEffect(() => {
+    getCollections();
+    getCases();
+  }, []);
+
+  const getCollections = async () => {
+    const response = await fetch('https://store-app-api-production.up.railway.app/collections');
+    const json = await response.json();
+    setCollections(json);
+  }
+
+  const getCases = async () => {
+    const response = await fetch('https://store-app-api-production.up.railway.app/cases');
+    const json = await response.json();
+    setCases(json);
+  }
 
   return (
     <BrowserRouter basename="/store-app">
@@ -24,10 +43,10 @@ function App() {
         <InfoBar />
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop/cases" element={<Cases />} />
+          <Route path="/" element={<Home collections={collections} cases={cases} />} />
+          <Route path="/shop/cases" element={<Cases cases={cases} />} />
           <Route path="/shop/cases/:id" element={<ItemDetail cart={cart} setCart={setCart} />} />
-          <Route path="/shop/collections" element={<Collections />} />
+          <Route path="/shop/collections" element={<Collections collections={collections} />} />
           <Route path="/shop/collections/:slug" element={<Collection />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/shop/accesories" element={<ThankYou />} />

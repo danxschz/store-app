@@ -1,16 +1,10 @@
 import styles from './CartItem.module.scss';
-import collections from '../../../data/collections';
-import cases from '../../../data/cases';
 import IconButton from '../../../components/IconButton/IconButton';
 import QuantityInput from '../../../components/QuantityInput/QuantityInput';
 
 const CartItem = (props) => {
   const { dataIndex, removeItem, changeQuantity } = props;
-
-  const { id, price, device, quantity, } = props.item;
-  const collection = collections[id.split('-')[0]].name;
-  const item = cases[id];
-  const { img, name } = item;
+  const { name, img, price, collection, device, quantity, } = props.item;
 
   return (
     <div className={styles.item}>

@@ -1,10 +1,10 @@
 import styles from './Cases.module.scss';
-import cases from '../../data/cases';
 import useDocTitle from '../../hooks/useDocTitle';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import Item from '../../components/Item/Item';
 
-const Cases = () => {
+const Cases = (props) => {
+  const { cases } = props;
   useDocTitle('Cases');
 
   return (
@@ -14,8 +14,8 @@ const Cases = () => {
           <SectionHeader text="All Cases" />
         </div>
         <div className={styles.cases}>
-          {Object.entries(cases).map(([key, value]) => {
-            return <Item case={value} id={key} key={key} />
+          {cases.map((item) => {
+            return <Item item={item} key={item.id} />
           })}
         </div>
       </div>

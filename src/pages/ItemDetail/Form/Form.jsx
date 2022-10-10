@@ -7,22 +7,21 @@ import Button from '../../../components/Button/Button';
 import { useEffect } from 'react';
 
 const Form = (props) => {
-  const { item, id, addItem } = props;
-
+  const { item, id, collection, addItem } = props;
   const [devices, setDevices] = useState(phoneDevices.apple);
-  const changeDevices = (e) => {
-    setDevices(phoneDevices[e.target.value]);
-  }
+  const [order, setOrder] = useState({ device: 'iPhone 13', quantity: 1 });
 
   useEffect(() => {
     changeDevice();
   }, [devices]); // eslint-disable-line
 
-  const [order, setOrder] = useState({ device: 'iPhone 13', quantity: 1 });
-
   const changeDevice = () => {
     const value = document.querySelector('#device').value;
     setOrder({ ...order, device: value });
+  }
+
+  const changeDevices = (e) => {
+    setDevices(phoneDevices[e.target.value]);
   }
 
   const changeQuantity = (quantity) => {
@@ -32,8 +31,11 @@ const Form = (props) => {
   const handleAddItem = (e) => {
     e.preventDefault();
     const newItem = {
-      id: id,
+      id,
+      name: item.name,
+      img: item.img,
       price: item.price,
+      collection,
       device: order.device,
       quantity: order.quantity,
     }

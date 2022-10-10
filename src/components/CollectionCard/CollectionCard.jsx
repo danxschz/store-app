@@ -2,8 +2,7 @@ import styles from './CollectionCard.module.scss';
 import { Link } from 'react-router-dom';
 
 const CollectionCard = (props) => {
-  const { id } = props;
-  const { name, img, slug } = props.collection;
+  const { id, name, img, slug } = props.collection || {};
 
   const style = {
     backgroundImage: `url(${img})`,

@@ -1,7 +1,6 @@
 import styles from './Collection.module.scss';
-import cases from '../../data/cases';
-import collections from '../../data/collections';
 import { useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import useDocTitle from '../../hooks/useDocTitle';
 import SectionHeader from '../../components/SectionHeader/SectionHeader';
 import Item from '../../components/Item/Item';
@@ -10,25 +9,39 @@ const Collection = () => {
   const { state } = useLocation();
   const id = state.id;
 
-  const collection = collections[id];
-  const collectionItems = collection.items;
+  const [collection, setCollection] = useState({});
 
-  useDocTitle(`${collection.name} Cases`);
+  useEffect(() => {
+    getCollection();
+  }, []); // eslint-disable-line
 
-  return (
+  const getCollection = async () => {
+    const response = await fetch(`https://store-app-api-production.up.railway.app/collections/${id}`);
+    const json = await response.json();
+    setCollection(json);
+  }
+
+  const { name, cases } = collection
+
+  const title = (name) ? `${name} Cases` : 'Loading';
+  useDocTitle(title);
+
+  if (name) return (
     <main>
       <div className={styles.content}>
         <div className={styles.header}>
-          <SectionHeader text={`${collection.name} Cases`} />
+          <SectionHeader text={`${name} Cases`} />
         </div>
         <div className={styles.cases}>
-          {collectionItems.map((key) => {
-            return <Item case={cases[key]} id={key} key={key} />
+          {cases.map((item) => {
+            return <Item item={item} key={item.id} />
           })}
         </div>
       </div>
     </main>
   );
+  
+  else return null;
 }
 
 export default Collection;

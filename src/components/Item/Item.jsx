@@ -1,11 +1,9 @@
 import styles from './Item.module.scss';
-import collections from '../../data/collections';
 import { Link } from 'react-router-dom';
 
 const Item = (props) => {
-  const { id } = props;
-  const { img, name, price } = props.case;
-  const collection = collections[id.split('-')[0]].name;
+  const { id, img, name, price, collection_obj } = props.item || {};
+  const collection = (collection_obj) ? collection_obj.name : undefined;
 
   return (
     <Link to={`/shop/cases/${id}`} className={styles.link}>
