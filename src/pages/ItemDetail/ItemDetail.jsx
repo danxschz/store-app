@@ -1,4 +1,5 @@
 import styles from './ItemDetail.module.scss';
+import accessories from '../../data/accessories.json';
 import { useState, useEffect } from 'react';
 import useDocTitle from '../../hooks/useDocTitle';
 import { useParams } from 'react-router-dom';
@@ -6,15 +7,17 @@ import Form from './Form/Form';
 
 const ItemDetail = (props) => {
   const { id } = useParams();
-  const { cart, setCart } = props;
+  const { cart, setCart, accessory } = props;
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    getItem();
-  }, []); // eslint-disable-line
+    if (accessory) setItem(accessories.find((i) => i.id === id));
+    else getItem();
+  }, []) // eslint-disable-line
 
   const getItem = async () => {
-    const response = await fetch(`https://store-app-api-production.up.railway.app/cases/${id}`);
+    const type = (accessory) ? 'accessories' : 'cases'
+    const response = await fetch(`https://store-app-api-production.up.railway.app/${type}/${id}`);
     const json = await response.json();
     setItem(json);
   }
@@ -39,7 +42,7 @@ const ItemDetail = (props) => {
             <h1 className={styles.name}>{name}</h1>
             <div className={styles.price}>{`$${price} USD`}</div>
           </div>
-          <Form item={item} id={id} collection={collection} addItem={addItem} />
+          <Form item={item} id={id} collection={collection} addItem={addItem} accessory={(accessory) ? true : false} />
         </div>
       </div>
     </main>

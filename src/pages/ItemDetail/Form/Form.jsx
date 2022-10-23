@@ -7,7 +7,7 @@ import Button from '../../../components/Button/Button';
 import { useEffect } from 'react';
 
 const Form = (props) => {
-  const { item, id, collection, addItem } = props;
+  const { item, id, collection, addItem, accessory } = props;
   const [devices, setDevices] = useState(phoneDevices.apple);
   const [order, setOrder] = useState({ device: 'iPhone 13', quantity: 1 });
 
@@ -38,14 +38,17 @@ const Form = (props) => {
       collection,
       device: order.device,
       quantity: order.quantity,
+      accessory,
     }
     addItem(newItem);
     openCart();
   }
 
+  const style = (accessory) ? { visibility: 'hidden' } : {};
+
   return (
     <form className={styles.form} onSubmit={handleAddItem}>
-      <div className={styles.input}>
+      <div className={styles.input} style={style}>
         <label htmlFor="brand">Brand</label>
         <select id="brand" defaultValue="apple" onChange={changeDevices}>
           <option value="apple" >Apple</option>
@@ -53,7 +56,7 @@ const Form = (props) => {
           <option value="xiaomi">Xiaomi</option>
         </select>
       </div>
-      <div className={styles.input}>
+      <div className={styles.input} style={style}>
         <label htmlFor="device">Device</label>
         <select id="device" onChange={changeDevice}>
           {devices.map((device, i) => {
