@@ -19,7 +19,9 @@
   </p>
 
   <h4>
-    <a href="https://danxschz.github.io/store-app">View Demo</a>
+    <a href="https://trl.danxschz.com">View Demo</a>
+    <span> · </span>
+    <a href="https://github.com/danxschz/store-app-api">API</a>
     <span> · </span>
     <a href="https://github.com/danxschz/store-app/issues/">Report Bug</a>
   </h4>
@@ -42,61 +44,44 @@
   &nbsp;
 
   <img src="screenshots/desktop-detail.png" alt="desktop page" width="600" height="auto"/>
+
+  <h3>Mobile</h3>
+  <img src="screenshots/mobile-cases.png" alt="mobile page" width="400" height="auto"/>
+
+  &nbsp;
+
+  <img src="screenshots/mobile-detail.png" alt="mobile page" width="400" height="auto"/>
 </div>
 
 ### Built With
 
+- MongoDB
+- Express
 - React
+- Node.js
 - React Router
 - JavaScript
+- TypeScript
 - HTML
 - CSS Modules
 - Sass
+- Webpack
 - npm
-- webpack
 
 ### Color Reference
 
-| Color         | Hex     |
-| :--------:    | :-----: |
-| Background    | #FFFFFF |
-| Primary       | #D91D35 |
-| Text          | #272624 |
-| Neutral Gray  | #707070 |
-
-## Getting Started
-
-### Run Locally
-
-In order to setup and work on this project on your own, you will need to:
-
-Clone the project
-
-```bash
-  git clone https://github.com/danxschz/store-app.git
-```
-
-Go to the project directory
-
-```bash
-  cd store-app
-```
-
-Install dependencies
-
-```bash
-  npm install
-```
+| Color        | Hex     |
+| :--------:   | :-----: |
+| Background   | #FFFFFF |
+| Primary      | #D91D35 |
+| Text         | #272624 |
+| Neutral Gray | #707070 |
 
 ## Usage
 
-- Browse through the store pages thanks to a client-side routing implementation
+- Browse through our phone cases and accessories thanks to a client-side routing implementation.
 - Features a fully functional cart system and item sorting by collection.
-
-## License
-
-Distributed under the MIT License. See LICENSE for more information.
 
 ## Contact
 
-Daniel Sanchez (@danxschz) - danxschz@gmail.com
+Daniel Sanchez (@danxschz) · [Portfolio](https://danxschz.com/) · contact@danxschz.com
