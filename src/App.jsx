@@ -39,7 +39,7 @@ function App() {
   }
 
   return (
-    <BrowserRouter basename="/store-app">
+    <BrowserRouter>
       <ScrollToTop />
       <div className="App">
         <InfoBar />
