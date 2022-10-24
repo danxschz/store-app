@@ -14,7 +14,7 @@ const MobileNav = () => {
         <ul>
           <li className={styles['hvr-underline']}><Link to="/shop/cases">Cases</Link></li>
           <li className={styles['hvr-underline']}><Link to="/shop/collections">Collections</Link></li>
-          <li className={styles['hvr-underline']}><Link to="/shop/accesories">Accesories</Link></li>
+          <li className={styles['hvr-underline']}><Link to="/shop/accessories">Accessories</Link></li>
           <li className={styles['hvr-underline']}><Link to="/about-us">About Us</Link></li>
         </ul>
         <SearchBar id="search-mobile"/>
