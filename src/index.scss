@@ -38,6 +38,12 @@ button {
   visibility: hidden;
 }
 
+@media (min-width: 1536px) {
+  :root {
+    font-size: 20px;
+  }
+}
+
 // Color schemes
 @mixin color-scheme($color, $background) {
   color: $color;
