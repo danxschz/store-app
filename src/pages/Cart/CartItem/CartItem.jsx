@@ -18,7 +18,7 @@ const CartItem = (props) => {
             <IconButton icon="fa-solid fa-xmark" scheme="scheme-light" hover="rotate-90" onClick={removeItem} dataIndex={dataIndex} />
           </div>
           <div style={style}>{device}</div>
-          <div style={style}>{collection}</div>
+          <div>{collection}</div>
         </div>
         <div className={styles.price}>
           <QuantityInput value={quantity} onChange={changeQuantity} dataIndex={dataIndex} />

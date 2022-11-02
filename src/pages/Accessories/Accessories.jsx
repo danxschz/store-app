@@ -5,6 +5,7 @@ import Item from '../../components/Item/Item';
 
 const Accessories = (props) => {
   const { accessories } = props;
+  
   useDocTitle('Accessories');
 
   return (

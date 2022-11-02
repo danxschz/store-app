@@ -1,5 +1,4 @@
 import styles from './ItemDetail.module.scss';
-import accessories from '../../data/accessories.json';
 import { useState, useEffect } from 'react';
 import useDocTitle from '../../hooks/useDocTitle';
 import { useParams } from 'react-router-dom';
@@ -11,8 +10,7 @@ const ItemDetail = (props) => {
   const [item, setItem] = useState({});
 
   useEffect(() => {
-    if (accessory) setItem(accessories.find((i) => i.id === id));
-    else getItem();
+    getItem();
   }, []) // eslint-disable-line
 
   const getItem = async () => {
@@ -42,7 +40,7 @@ const ItemDetail = (props) => {
             <h1 className={styles.name}>{name}</h1>
             <div className={styles.price}>{`$${price} USD`}</div>
           </div>
-          <Form item={item} id={id} collection={collection} addItem={addItem} accessory={(accessory) ? true : false} />
+          <Form item={item} id={id} collection={collection} addItem={addItem} accessory={accessory} />
         </div>
       </div>
     </main>

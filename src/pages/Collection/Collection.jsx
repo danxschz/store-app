@@ -21,20 +21,23 @@ const Collection = () => {
     setCollection(json);
   }
 
-  const { name, cases } = collection
+  const { name, cases, accessories } = collection
 
-  const title = (name) ? `${name} Cases` : 'Loading';
+  const title = (name) ? `${name} Items` : 'Loading';
   useDocTitle(title);
 
   if (name) return (
     <main>
       <div className={styles.content}>
         <div className={styles.header}>
-          <SectionHeader text={`${name} Cases`} />
+          <SectionHeader text={`${name} Items`} />
         </div>
         <div className={styles.cases}>
           {cases.map((item) => {
             return <Item item={item} key={item.id} />
+          })}
+          {accessories.map((item) => {
+            return <Item item={item} key={item.id} accessory />
           })}
         </div>
       </div>

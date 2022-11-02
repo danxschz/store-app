@@ -1,4 +1,3 @@
-import accessories from './data/accessories.json';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
@@ -20,10 +19,12 @@ function App() {
   const [cart, setCart] = useState([]);
   const [collections, setCollections] = useState([]);
   const [cases, setCases] = useState([]);
+  const [accessories, setAccessories] = useState([]);
 
   useEffect(() => {
     getCollections();
     getCases();
+    getAccessories();
   }, []);
 
   const getCollections = async () => {
@@ -36,6 +37,12 @@ function App() {
     const response = await fetch('https://store-app-api-production.up.railway.app/cases');
     const json = await response.json();
     setCases(json);
+  }
+
+  const getAccessories = async () => {
+    const response = await fetch('https://store-app-api-production.up.railway.app/accessories');
+    const json = await response.json();
+    setAccessories(json);
   }
 
   return (
